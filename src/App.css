@@ -1,0 +1,602 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+.btnOrange {
+  cursor: pointer;
+  padding: 15px 25px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  background-color: rgb(219, 51, 9);
+  font-weight: bold;
+  color: white;
+}
+.btnOrange:hover {
+  background-color: rgb(194, 47, 10);
+}
+
+.navbar {
+  margin: 2rem auto;
+  max-width: 1024px;
+  background-color: transparent;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 20px;
+}
+.navbar .aa li a:hover {
+  color: #cfcfcf;
+  transition: all 0.2s ease-in;
+}
+
+.container {
+  max-width: 1024px;
+  margin: auto;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 36px;
+}
+.logo a {
+  color: white;
+}
+
+.menu-icon {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-icon span {
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.menu-icon span:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon span:nth-child(2),
+.menu-icon span:nth-child(3) {
+  top: 9px;
+}
+
+.menu-icon span:nth-child(4) {
+  top: 18px;
+}
+
+.menu-icon.open span:nth-child(1),
+.menu-icon.open span:nth-child(4) {
+  top: 9px;
+  width: 0%;
+}
+
+.menu-icon.open span:nth-child(2) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.menu.active {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.buttons .searchIcon {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@keyframes slideIn {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0;
+  }
+}
+.home {
+  margin: 6rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.home .cardHero {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  max-width: 600px;
+}
+.home .cardHero h1 {
+  font-size: 50px;
+}
+.home .cardHero p {
+  color: #cfcfcf;
+}
+.home .cardHero .cardButtons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.home .cardHero .cardButtons .btnOrange {
+  font-size: 25px;
+}
+.home .cardHero .cardButtons .CardBtn {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.home .cardHero .cardButtons .CardBtn .arrow {
+  color: orangered;
+}
+.home .HeroImg img {
+  max-width: 350px;
+  height: auto;
+}
+
+.Pmenu {
+  background-color: #cfcfcf;
+}
+.Pmenu .h1 {
+  padding: 3rem;
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+}
+.Pmenu .h1 span {
+  color: orangered;
+}
+.Pmenu .cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Pmenu .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid grey;
+  min-width: 200px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+.Pmenu .card span .iconCard {
+  font-size: 5rem;
+  color: orangered;
+}
+.Pmenu .card h2 {
+  color: black;
+  font-size: 2rem;
+}
+.Pmenu .bigCard {
+  display: flex;
+  gap: 3rem;
+  padding: 0 3rem;
+  margin: 6rem 0;
+}
+.Pmenu .bigCard .bigImg {
+  width: 400px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.Pmenu .bigCard .bigDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  width: auto;
+}
+.Pmenu .bigCard .bigDesc h3 {
+  color: orangered;
+}
+.Pmenu .bigCard .bigDesc h2 {
+  color: black;
+  font-size: 3rem;
+}
+.Pmenu .bigCard .bigDesc .firstLittleDesc {
+  color: black;
+}
+.Pmenu .bigCard .bigDesc .littleDesc {
+  display: flex;
+  gap: 4rem;
+}
+.Pmenu .bigCard .bigDesc .littleDesc .LittleNumber {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.Pmenu .bigCard .bigDesc .littleDesc .LittleNumber :nth-child(1) {
+  color: orangered;
+  font-weight: bold;
+  font-size: 40px;
+}
+.Pmenu .bigCard .bigDesc .littleDesc .LittleNumber :nth-child(2) {
+  color: black;
+  font-weight: bold;
+}
+.Pmenu .littlMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.Pmenu .littlMenu .littleMenuBody {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Pmenu .littlMenu .cardMenu {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  gap: 2rem;
+  width: 300px;
+  padding: 20px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  position: relative;
+}
+.Pmenu .littlMenu .cardMenu .menuHead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.Pmenu .littlMenu .cardMenu .menuHead .MenuImg {
+  height: 200px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  align-self: flex-start;
+}
+.Pmenu .littlMenu .cardMenu .menuHead p {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  align-self: flex-end;
+}
+.Pmenu .littlMenu .cardMenu .menuBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Pmenu .littlMenu .cardMenu .menuBody p {
+  color: black;
+  font-weight: bold;
+}
+.Pmenu .littlMenu .cardMenu .menuBody .icons {
+  background-color: red;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+.Pmenu .littlMenu .littlMenuHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Pmenu .littlMenu .littlMenuHead h1 {
+  color: black;
+  font-size: 3rem;
+}
+.Pmenu .littlMenu .littlMenuHead h1 span {
+  color: orangered;
+}
+.Pmenu .littlMenu .littlMenuHead a .btnSee {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 1rem;
+}
+.Pmenu .littlMenu .littlMenuHead a .btnSee .btnSeeIcon {
+  font-size: 20px;
+}
+.Pmenu .collection {
+  margin: 6rem 0;
+}
+.Pmenu .collection .collectionHead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.Pmenu .collection .collectionHead h1 {
+  color: black;
+  font-size: 3rem;
+}
+.Pmenu .collection .collectionHead h1 span {
+  color: orangered;
+}
+.Pmenu .collection .collectionHead .headSpan {
+  color: black;
+}
+.Pmenu .collection .swiperr .swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.Pmenu .collection .swiperr .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.Pmenu .collection .swiperr .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Pmenu .meetChefs {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.Pmenu .meetChefs .meetChefsHead {
+  display: flex;
+  justify-content: space-between;
+}
+.Pmenu .meetChefs .meetChefsHead h1 {
+  font-size: 37px;
+  color: black;
+}
+.Pmenu .meetChefs .meetChefsHead .btnSee {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 1rem;
+}
+.Pmenu .meetChefs .meetChefsHead .btnSee .btnSeeIcon {
+  font-size: 20px;
+}
+.Pmenu .meetChefs .chefs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.Pmenu .meetChefs .chefs .cardChef {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.Pmenu .meetChefs .chefs .cardChef img {
+  height: 200px;
+  border-radius: 10px;
+  width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Pmenu .meetChefs .chefs .cardChef h3 {
+  color: black;
+}
+.Pmenu .testimonials {
+  margin-top: 5rem;
+}
+.Pmenu .testimonials .Thead {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Pmenu .testimonials .Thead p {
+  color: black;
+  font-weight: 700;
+}
+.Pmenu .testimonials .Thead h1 {
+  font-weight: 900;
+  font-size: 55px;
+  color: black;
+}
+.Pmenu .testimonials .Thead h1 span {
+  color: orangered;
+}
+.Pmenu .testimonials .sliderss {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem auto;
+}
+.Pmenu .testimonials .sliderss .leftSide img {
+  width: 250px;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 25px;
+}
+.Pmenu .testimonials .sliderss .RighttSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: #000;
+}
+
+.footer .container .topFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 0 0;
+}
+.footer .container .topFooter .socialsFooter {
+  display: flex;
+  gap: 10px;
+}
+.footer .container .topFooter .socialsFooter a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: orangered;
+}
+.footer .container .topFooter .socialsFooter a .socialIcon {
+  font-size: 20px;
+}
+.footer .container .hrFooter {
+  margin: 2rem 0;
+}
+.footer .container .footerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 2rem 0;
+}
+
+/*media*/
+@media screen and (max-width: 767px) {
+  .menu {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 50%;
+    height: 50%;
+    background-color: #333;
+    padding: 10px;
+    transition: right 0.5s ease;
+  }
+  .menu.active {
+    right: 0;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .menu-icon span {
+    background-color: #fff;
+  }
+  .menu.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 85px;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    gap: 2rem;
+    padding: 2rem;
+    border-top-left-radius: 20px;
+    animation: slideIn 2s;
+  }
+  .menu.active li {
+    margin-bottom: 10px;
+  }
+  .menu.active li:last-child {
+    margin-bottom: 0;
+  }
+  .buttons {
+    display: none;
+  }
+  .sliderss {
+    display: flex;
+    flex-direction: column;
+  }
+  .sliderss .leftSide img {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .home {
+    padding: 0 2rem;
+    justify-content: center;
+  }
+  .home .cardHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .Pmenu .container .cards {
+    justify-content: center;
+  }
+  .Pmenu .container .bigCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .Pmenu .container .bigCard img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .Pmenu .container .bigCard .littleDesc {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=App.css.map */
